@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.bcm.havoc.akilometer">
+
     <uses-sdk
         android:minSdkVersion="15"
         android:targetSdkVersion="23" />
 
-
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
-    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <!-- 读取设置？？？ -->
     <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
     <!-- 这个权限用于进行网络定位 -->
@@ -72,6 +71,7 @@
     <uses-feature
         android:glEsVersion="0x00020000"
         android:required="true" />
+
     <application
         android:name=".Base.application.MyApplication"
         android:allowBackup="true"
@@ -83,15 +83,15 @@
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"
-            android:process=":remote" >
+            android:process=":remote">
             <intent-filter>
-                <action android:name="com.baidu.location.service_v2.2" >
-                </action>
+                <action android:name="com.baidu.location.service_v2.2" />
             </intent-filter>
         </service>
+
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="zIQEsONyDmS7NZ3cbeai2NbUF0a1Vcfc" />  <!--http://lbsyun.baidu.com/apiconsole/key-->
+            android:value="ALcjEVZhYoEbxUmH5Oy6gwrhMdoQXCAT" /> <!-- http://lbsyun.baidu.com/apiconsole/key -->
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">
@@ -103,6 +103,19 @@
         </activity>
         <activity android:name=".Base.ui.LoadingActivity" />
         <activity android:name=".Base.ui.LoginActivity" />
+        <activity android:name=".UI.OneActivity" />
+        <activity android:name=".UI.TwoActivity" />
+        <activity android:name=".UI.ThreeActivity" />
+        <activity android:name=".UI.FourActivity" />
+        <activity android:name=".UI.FiveActivity" />
+        <activity android:name=".UI.SixActivity" />
+        <activity android:name=".UI.ProInfoActivity"/>
+            <activity
+                android:name="cn.finalteam.rxgalleryfinal.ui.activity.MediaActivity"
+                android:exported="true" />
+            <activity
+                android:name="com.yalantis.ucrop.UCropActivity"
+                android:screenOrientation="portrait" />
     </application>
 
 </manifest>

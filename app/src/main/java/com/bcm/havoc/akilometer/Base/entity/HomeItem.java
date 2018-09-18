@@ -3,7 +3,7 @@ package com.bcm.havoc.akilometer.Base.entity;
 /**
  * https://github.com/CymChad/BaseRecyclerViewAdapterHelper
  */
-public class HomeItem {
+public class HomeItem implements java.io.Serializable {
     private String title;
     private Class<?> activity;
     private int imageResource;

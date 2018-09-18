@@ -13,9 +13,9 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.bcm.havoc.akilometer.Adapter.BottomViewAdapter;
-import com.bcm.havoc.akilometer.Fragment.HomeFragment;
-import com.bcm.havoc.akilometer.Fragment.LookListFragment;
-import com.bcm.havoc.akilometer.Fragment.MyFragment;
+import com.bcm.havoc.akilometer.UI.Fragment.HomeFragment;
+import com.bcm.havoc.akilometer.UI.Fragment.LookListFragment;
+import com.bcm.havoc.akilometer.UI.Fragment.MyFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,11 +43,11 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
                 case R.id.navigation_home:
                     viewpager_launch.setCurrentItem(0);
                     return true;
-                case R.id.navigation_dashboard:
-                    viewpager_launch.setCurrentItem(1);
-                    return true;
+//                case R.id.navigation_dashboard:
+//                    viewpager_launch.setCurrentItem(1);
+//                    return true;
                 case R.id.navigation_notifications:
-                    viewpager_launch.setCurrentItem(2);
+                    viewpager_launch.setCurrentItem(1);
                     return true;
             }
 
@@ -88,11 +88,11 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
             }
         });
         list_fragment.add(HomeFragment.newInstance("",""));
-        list_fragment.add(LookListFragment.newInstance("",""));
+//        list_fragment.add(LookListFragment.newInstance("",""));
         list_fragment.add(MyFragment.newInstance("",""));
         BottomViewAdapter adapter = new BottomViewAdapter(getSupportFragmentManager(), list_fragment);
         viewpager_launch.setAdapter(adapter);
-        viewpager_launch.setOffscreenPageLimit(3);//设置缓存view 的个数
+        viewpager_launch.setOffscreenPageLimit(2);//设置缓存view 的个数
     }
 
     @Override
