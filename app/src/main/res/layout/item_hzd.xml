@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    android:id="@+id/card_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:foreground="?android:attr/selectableItemBackground"
+    card_view:cardBackgroundColor="@color/item_bg"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardElevation="2dp"
+    card_view:cardUseCompatPadding="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:gravity="center"
+        android:layout_height="140dp">
+
+        <ImageView
+            android:id="@+id/im_add_photo"
+            android:layout_height="100dp"
+            android:layout_width="wrap_content"
+            android:src="@mipmap/icon_add_photo"
+            android:background="@null"
+            />
+        <TextView
+            android:id="@+id/item_scan_reslf"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/chocolate"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:text="12326548"
+            android:textSize="@dimen/sp_26" />
+<Button
+    android:id="@+id/btn_up"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:background="@color/chocolate"
+    android:text="上传"
+
+    android:textColor="@color/white"/>
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>
+
+
